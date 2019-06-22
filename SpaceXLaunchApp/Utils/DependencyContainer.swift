@@ -45,9 +45,17 @@ struct DependencyContainer {
             return MoyaProvider<SpaceXService>(plugins: [NetworkLoggerPlugin(verbose: true)])
         }
         //MARK: Realm
-        container.register(Realm.self) { _ in
-            return try! Realm(configuration: .defaultConfiguration)
+        container.register(Realm.self) { resolver in
+            return try! Realm(configuration: resolver.resolve(Realm.Configuration.self)!)
         }
+        container.register(Realm.Configuration.self) { _ in
+            var config = Realm.Configuration.defaultConfiguration
+            config.schemaVersion = AppDefaults.realmSchemaVersion
+            config.migrationBlock = { migration, oldSchemeVersion in
+                
+            }
+            return config
+        }.inObjectScope(.container)
         //MARK: LaunchRepositoryProtocol
         container.register(LaunchRepositoryProtocol.self) { resolver in
             return LaunchRepository(realm: resolver.resolve(Realm.self)!,

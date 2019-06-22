@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct AppDefaults {
+    static let realmSchemaVersion: UInt64 = 1
+}
+
 enum Images : String {
     case info = "ic_info"
     case launch = "ic_launch"

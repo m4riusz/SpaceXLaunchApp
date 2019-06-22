@@ -10,4 +10,7 @@ import UIKit
 
 class InfoController: BaseViewController<InfoViewModel> {
     
+    override func initialize() {
+        self.view.backgroundColor = .blue
+    }
 }
