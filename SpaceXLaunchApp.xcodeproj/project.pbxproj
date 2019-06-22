@@ -26,6 +26,18 @@
 		6F77609E22BCFA6B002B119A /* NextLaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F77609D22BCFA6B002B119A /* NextLaunchController.swift */; };
 		6F7760A322BCFC43002B119A /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760A222BCFC43002B119A /* LaunchListViewModel.swift */; };
 		6F7760A522BCFC72002B119A /* LaunchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760A422BCFC72002B119A /* LaunchListController.swift */; };
+		6F7760AA22BD063C002B119A /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760A922BD063C002B119A /* Launch.swift */; };
+		6F7760AC22BD0651002B119A /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760AB22BD0651002B119A /* Rocket.swift */; };
+		6F7760AE22BD067D002B119A /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760AD22BD067D002B119A /* Links.swift */; };
+		6F7760B022BD069E002B119A /* LaunchSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760AF22BD069E002B119A /* LaunchSite.swift */; };
+		6F7760B222BD06B9002B119A /* LaunchFailureDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7760B122BD06B9002B119A /* LaunchFailureDetails.swift */; };
+		6FDEE9EA22BE4C7100271F92 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9E922BE4C7100271F92 /* API.swift */; };
+		6FDEE9ED22BE519600271F92 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9EC22BE519600271F92 /* LaunchRepository.swift */; };
+		6FDEE9EF22BE52F900271F92 /* RMLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9EE22BE52F900271F92 /* RMLaunch.swift */; };
+		6FDEE9F122BE535500271F92 /* RMRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F022BE535500271F92 /* RMRocket.swift */; };
+		6FDEE9F422BE54D100271F92 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F322BE54D100271F92 /* DomainConvertibleType.swift */; };
+		6FDEE9F622BE54F900271F92 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F522BE54F900271F92 /* RealmRepresentable.swift */; };
+		6FDEE9F922BE569600271F92 /* ObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F822BE569600271F92 /* ObjectExtension.swift */; };
 		79E63EE1CA1BCB2AB6284E3E /* Pods_SpaceXLaunchAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2471EBB8E12B818F1BE880B9 /* Pods_SpaceXLaunchAppTests.framework */; };
 		A3E4E37488CAEEAA3894832E /* Pods_SpaceXLaunchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8A5C69CB363A4629AA6F1F /* Pods_SpaceXLaunchApp.framework */; };
 		A6905EE0382BAE2A1B8FC9B0 /* Pods_SpaceXLaunchAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D69CF3E10DEF58F40AC3C /* Pods_SpaceXLaunchAppUITests.framework */; };
@@ -77,6 +89,18 @@
 		6F77609D22BCFA6B002B119A /* NextLaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLaunchController.swift; sourceTree = "<group>"; };
 		6F7760A222BCFC43002B119A /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
 		6F7760A422BCFC72002B119A /* LaunchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListController.swift; sourceTree = "<group>"; };
+		6F7760A922BD063C002B119A /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		6F7760AB22BD0651002B119A /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		6F7760AD22BD067D002B119A /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		6F7760AF22BD069E002B119A /* LaunchSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSite.swift; sourceTree = "<group>"; };
+		6F7760B122BD06B9002B119A /* LaunchFailureDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchFailureDetails.swift; sourceTree = "<group>"; };
+		6FDEE9E922BE4C7100271F92 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6FDEE9EC22BE519600271F92 /* LaunchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
+		6FDEE9EE22BE52F900271F92 /* RMLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLaunch.swift; sourceTree = "<group>"; };
+		6FDEE9F022BE535500271F92 /* RMRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRocket.swift; sourceTree = "<group>"; };
+		6FDEE9F322BE54D100271F92 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		6FDEE9F522BE54F900271F92 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		6FDEE9F822BE569600271F92 /* ObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtension.swift; sourceTree = "<group>"; };
 		721488BD2330B5F441BA8C51 /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppUITests/Pods-SpaceXLaunchAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EBEDF50EC2EA20E7108ED9C /* Pods-SpaceXLaunchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchApp.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A52DD852249CAC9AED75A567 /* Pods-SpaceXLaunchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchApp.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +162,8 @@
 		6F26F0CB22BCE7E9001BA8E3 /* SpaceXLaunchApp */ = {
 			isa = PBXGroup;
 			children = (
+				6FDEE9EB22BE516B00271F92 /* Repositories */,
+				6F7760B322BD0758002B119A /* Realm */,
 				6F77609722BCF993002B119A /* NextLaunch */,
 				6F77609F22BCFBE8002B119A /* LaunchList */,
 				6F77607F22BCF6D3002B119A /* Base */,
@@ -185,6 +211,7 @@
 				6F77608722BCF77E002B119A /* extensions */,
 				6F77608322BCF732002B119A /* DependencyContainer.swift */,
 				6F77608522BCF769002B119A /* Spacings.swift */,
+				6FDEE9E922BE4C7100271F92 /* API.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -203,51 +230,100 @@
 		6F77609722BCF993002B119A /* NextLaunch */ = {
 			isa = PBXGroup;
 			children = (
-				6F77609822BCF9C5002B119A /* controller */,
-				6F77609922BCF9DB002B119A /* viewModel */,
+				6F77609822BCF9C5002B119A /* controllers */,
+				6F77609922BCF9DB002B119A /* viewModels */,
 			);
 			path = NextLaunch;
 			sourceTree = "<group>";
 		};
-		6F77609822BCF9C5002B119A /* controller */ = {
+		6F77609822BCF9C5002B119A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6F77609D22BCFA6B002B119A /* NextLaunchController.swift */,
 			);
-			path = controller;
+			path = controllers;
 			sourceTree = "<group>";
 		};
-		6F77609922BCF9DB002B119A /* viewModel */ = {
+		6F77609922BCF9DB002B119A /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
 				6F77609B22BCF9FE002B119A /* NextLaunchViewModel.swift */,
 			);
-			path = viewModel;
+			path = viewModels;
 			sourceTree = "<group>";
 		};
 		6F77609F22BCFBE8002B119A /* LaunchList */ = {
 			isa = PBXGroup;
 			children = (
-				6F7760A022BCFC15002B119A /* controller */,
-				6F7760A122BCFC20002B119A /* viewModel */,
+				6F7760A022BCFC15002B119A /* controllers */,
+				6F7760A822BD0334002B119A /* models */,
+				6F7760A122BCFC20002B119A /* viewModels */,
 			);
 			path = LaunchList;
 			sourceTree = "<group>";
 		};
-		6F7760A022BCFC15002B119A /* controller */ = {
+		6F7760A022BCFC15002B119A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6F7760A422BCFC72002B119A /* LaunchListController.swift */,
 			);
-			path = controller;
+			path = controllers;
 			sourceTree = "<group>";
 		};
-		6F7760A122BCFC20002B119A /* viewModel */ = {
+		6F7760A122BCFC20002B119A /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
 				6F7760A222BCFC43002B119A /* LaunchListViewModel.swift */,
 			);
-			path = viewModel;
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		6F7760A822BD0334002B119A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6F7760A922BD063C002B119A /* Launch.swift */,
+				6F7760AB22BD0651002B119A /* Rocket.swift */,
+				6F7760AD22BD067D002B119A /* Links.swift */,
+				6F7760AF22BD069E002B119A /* LaunchSite.swift */,
+				6F7760B122BD06B9002B119A /* LaunchFailureDetails.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		6F7760B322BD0758002B119A /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				6FDEE9F222BE54C600271F92 /* utils */,
+				6FDEE9EE22BE52F900271F92 /* RMLaunch.swift */,
+				6FDEE9F022BE535500271F92 /* RMRocket.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		6FDEE9EB22BE516B00271F92 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6FDEE9EC22BE519600271F92 /* LaunchRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6FDEE9F222BE54C600271F92 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				6FDEE9F722BE568100271F92 /* extensions */,
+				6FDEE9F322BE54D100271F92 /* DomainConvertibleType.swift */,
+				6FDEE9F522BE54F900271F92 /* RealmRepresentable.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		6FDEE9F722BE568100271F92 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6FDEE9F822BE569600271F92 /* ObjectExtension.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		96D3A4D987C28A8302EAAC6F /* Frameworks */ = {
@@ -493,20 +569,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FDEE9EA22BE4C7100271F92 /* API.swift in Sources */,
 				6F77608D22BCF7DA002B119A /* UICollectionViewExtensionRx.swift in Sources */,
 				6F77609322BCF852002B119A /* ViewModelType.swift in Sources */,
+				6F7760B222BD06B9002B119A /* LaunchFailureDetails.swift in Sources */,
+				6FDEE9EF22BE52F900271F92 /* RMLaunch.swift in Sources */,
+				6F7760AA22BD063C002B119A /* Launch.swift in Sources */,
 				6F77609C22BCF9FE002B119A /* NextLaunchViewModel.swift in Sources */,
 				6F7760A522BCFC72002B119A /* LaunchListController.swift in Sources */,
+				6FDEE9F122BE535500271F92 /* RMRocket.swift in Sources */,
 				6F77608622BCF769002B119A /* Spacings.swift in Sources */,
+				6FDEE9F622BE54F900271F92 /* RealmRepresentable.swift in Sources */,
 				6F77608B22BCF7BB002B119A /* UICollectionViewExtension.swift in Sources */,
 				6F77609522BCF87D002B119A /* BaseViewController.swift in Sources */,
+				6FDEE9ED22BE519600271F92 /* LaunchRepository.swift in Sources */,
 				6F77608922BCF795002B119A /* UICollectionViewCellExtension.swift in Sources */,
+				6F7760AC22BD0651002B119A /* Rocket.swift in Sources */,
 				6F77608F22BCF80D002B119A /* StringExtension.swift in Sources */,
 				6F26F0CD22BCE7E9001BA8E3 /* AppDelegate.swift in Sources */,
 				6F7760A322BCFC43002B119A /* LaunchListViewModel.swift in Sources */,
+				6F7760AE22BD067D002B119A /* Links.swift in Sources */,
+				6FDEE9F922BE569600271F92 /* ObjectExtension.swift in Sources */,
 				6F77609E22BCFA6B002B119A /* NextLaunchController.swift in Sources */,
 				6F77609122BCF839002B119A /* BaseView.swift in Sources */,
 				6F77608422BCF732002B119A /* DependencyContainer.swift in Sources */,
+				6F7760B022BD069E002B119A /* LaunchSite.swift in Sources */,
+				6FDEE9F422BE54D100271F92 /* DomainConvertibleType.swift in Sources */,
 				6F77608122BCF6EB002B119A /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

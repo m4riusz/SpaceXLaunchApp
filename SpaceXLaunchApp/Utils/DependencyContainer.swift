@@ -8,6 +8,8 @@
 
 import Foundation
 import Swinject
+import Moya
+import RealmSwift
 
 struct DependencyContainer {
     
@@ -25,11 +27,24 @@ struct DependencyContainer {
             return LaunchListController(viewModel: resolver.resolve(LaunchListViewModel.self)!)
         }
         //MARK: NextLaunch
-        container.register(NextLaunchViewModel.self) { _ in
-            return NextLaunchViewModel()
+        container.register(NextLaunchViewModel.self) { resolver in
+            return NextLaunchViewModel(launchRepository: resolver.resolve(LaunchRepositoryProtocol.self)!)
         }
         container.register(NextLaunchController.self) { resolver in
             return NextLaunchController(viewModel: resolver.resolve(NextLaunchViewModel.self)!)
+        }
+        //MARK: MoyaProvider
+        container.register(MoyaProvider<SpaceXService>.self) { _ in
+            return MoyaProvider<SpaceXService>()
+        }
+        //MARK: Realm
+        container.register(Realm.self) { _ in
+            return try! Realm(configuration: .defaultConfiguration)
+        }
+        //MARK: LaunchRepositoryProtocol
+        container.register(LaunchRepositoryProtocol.self) { resolver in
+            return LaunchRepository(realm: resolver.resolve(Realm.self)!,
+                                    provider: resolver.resolve(MoyaProvider<SpaceXService>.self)!)
         }
         return container
     }
@@ -38,7 +53,9 @@ struct DependencyContainer {
         return DependencyContainer.container.resolve(serviceType)!
     }
     
-    static func resolve<Service, Argument>(_ serviceType: Service.Type, _ argument: Argument) -> Service {
-        return DependencyContainer.container.resolve(serviceType, argument: argument)!
+    static func resolve<Service, Argument>(_ serviceType: Service.Type,
+                                           _ argument: Argument) -> Service {
+        return DependencyContainer.container.resolve(serviceType,
+                                                     argument: argument)!
     }
 }
