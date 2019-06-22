@@ -14,10 +14,13 @@ struct NextLaunchViewModel: ViewModelType {
     
     struct Input {
         let loadData: Driver<Void>
+        let refresh: Driver<Void>
     }
     
     struct Output {
+        let nextLaunch: Driver<Launch>
         let refreshed: Driver<Void>
+        let error: Driver<Error>
     }
     
     fileprivate let launchRepository: LaunchRepositoryProtocol
@@ -27,19 +30,29 @@ struct NextLaunchViewModel: ViewModelType {
     }
     
     func transform(input: NextLaunchViewModel.Input) -> NextLaunchViewModel.Output {
-        let refreshedAction = input.loadData
+        
+        let errorTracker = ErrorTracker()
+        
+        let loadAction = input.loadData
             .asObservable()
-            .flatMapLatest { _ -> Completable in
+            .flatMapLatest { _ -> Observable<Launch> in
+                return self.launchRepository.getNextLaunch()
+            }
+            .asDriverOnErrorJustComplete()
+        
+        let refreshedAction = input.refresh
+            .asObservable()
+            .flatMapLatest { _ -> Observable<Void> in
                 return self.launchRepository.refreshNextLaunch()
             }
-            .flatMapLatest { completable -> Observable<Void> in
-                return .just(Void())
-            }
-            .asDriver { (error) -> SharedSequence<DriverSharingStrategy, ()> in
-                print(error.localizedDescription)
-                return .never()
-        }
+            .trackError(errorTracker)
+            .asDriverOnErrorJustComplete()
+
+        let errorAction = errorTracker
+            .asDriver()
         
-        return Output(refreshed: refreshedAction)
+        return Output(nextLaunch: loadAction,
+                      refreshed: refreshedAction,
+                      error: errorAction)
     }
 }

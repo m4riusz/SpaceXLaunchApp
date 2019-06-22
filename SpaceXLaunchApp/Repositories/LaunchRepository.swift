@@ -14,7 +14,7 @@ import RxRealm
 
 protocol LaunchRepositoryProtocol {
     func getNextLaunch() -> Observable<Launch>
-    func refreshNextLaunch() -> Completable
+    func refreshNextLaunch() -> Observable<Void>
 }
 
 struct LaunchRepository : LaunchRepositoryProtocol {
@@ -29,6 +29,8 @@ struct LaunchRepository : LaunchRepositoryProtocol {
     
     func getNextLaunch() -> Observable<Launch> {
         let objects = self.realm.objects(RMLaunch.self)
+            .filter(NSPredicate(format: "isNext == %@", NSNumber(booleanLiteral: true)))
+        
         return Observable.array(from: objects)
             .flatMapLatest({ realmObjects -> Observable<Launch> in
                 guard let first = realmObjects.first?.asDomain() else {
@@ -38,13 +40,20 @@ struct LaunchRepository : LaunchRepositoryProtocol {
             })
     }
     
-    func refreshNextLaunch() -> Completable {
+    func refreshNextLaunch() -> Observable<Void> {
         return provider.rx.request(.nextLaunch)
             .map(Launch.self)
-            .flatMapCompletable({ launch -> Completable in
+            .asObservable()
+            .flatMapLatest({ launch -> Observable<Void> in
                 return self.realm.rx.save(entity: launch)
-                    .asSingle()
-                    .asCompletable()
+                    .do(onNext: { _ in
+                        let launches = self.realm.objects(RMLaunch.self)
+                        self.realm.beginWrite()
+                        launches.forEach({
+                            $0.isNext = $0.id == launch.id
+                        })
+                        try! self.realm.commitWrite()
+                    })
             })
     }
 }

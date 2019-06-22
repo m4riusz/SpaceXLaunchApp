@@ -14,14 +14,9 @@ struct Launch: Codable {
     let missionName: String
     let upcoming: Bool
     let launchDateUnix: Int
-    let launchDateUtc: String
-    let launchDateLocal: Date
-    let rocket: Rocket
-//    let launchSite: LaunchSite
     let launchSuccess: Bool
-//    let launchFailureDetails: LaunchFailureDetails?
-//    let links: Links
     let details: String
+    var isNext: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -29,13 +24,36 @@ struct Launch: Codable {
         case missionName = "mission_name"
         case upcoming = "upcoming"
         case launchDateUnix = "launch_date_unix"
-        case launchDateUtc = "launch_date_utc"
-        case launchDateLocal = "launch_date_local"
-        case rocket = "rocket"
-//        case launchSite = "launch_site"
         case launchSuccess = "launch_success"
-//        case launchFailureDetails = "launch_failure_details"
-//        case links = "links"
         case details = "details"
+    }
+    
+    init(id: String,
+         flightNumber: Int,
+         missionName: String,
+         upcoming: Bool,
+         launchDateUnix: Int,
+         launchSuccess: Bool,
+         details: String,
+         isNext: Bool) {
+        self.id = id
+        self.flightNumber = flightNumber
+        self.missionName = missionName
+        self.upcoming = upcoming
+        self.launchDateUnix = launchDateUnix
+        self.launchSuccess = launchSuccess
+        self.details = details
+        self.isNext = isNext
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try! values.decodeIfPresent(String.self, forKey: .id) ?? ""
+        self.flightNumber = try! values.decodeIfPresent(Int.self, forKey: .flightNumber) ?? 0
+        self.missionName = try! values.decodeIfPresent(String.self, forKey: .id) ?? ""
+        self.upcoming = try! values.decodeIfPresent(Bool.self, forKey: .upcoming) ?? false
+        self.launchDateUnix = try! values.decodeIfPresent(Int.self, forKey: .launchDateUnix) ?? 0
+        self.launchSuccess = try! values.decodeIfPresent(Bool.self, forKey: .launchSuccess) ?? true
+        self.details = try! values.decodeIfPresent(String.self, forKey: .details) ?? ""
     }
 }

@@ -35,7 +35,7 @@ struct DependencyContainer {
         }
         //MARK: MoyaProvider
         container.register(MoyaProvider<SpaceXService>.self) { _ in
-            return MoyaProvider<SpaceXService>()
+            return MoyaProvider<SpaceXService>(plugins: [NetworkLoggerPlugin(verbose: true)])
         }
         //MARK: Realm
         container.register(Realm.self) { _ in

@@ -42,7 +42,10 @@ extension SpaceXService : TargetType {
     var task: Task {
         switch self {
         case .nextLaunch:
-            return .requestParameters(parameters: ["id": true], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["id": true],
+                                      encoding: URLEncoding(destination: .queryString,
+                                                            arrayEncoding: .brackets,
+                                                            boolEncoding: .literal))
         }
     }
     

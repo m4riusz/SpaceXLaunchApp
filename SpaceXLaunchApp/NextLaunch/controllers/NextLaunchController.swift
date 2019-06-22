@@ -17,23 +17,27 @@ class NextLaunchController: BaseViewController<NextLaunchViewModel> {
     override func initialize() {
         self.view.backgroundColor = .green
         
-//        let viewWillAppear = self.rx.methodInvoked(#selector(viewWillAppear(_:)))
-//            .subscribe(onNext: { (_) in
-//                print("a")
-//            })
-//
         let viewWillAppear = self.rx.methodInvoked(#selector(viewWillAppear(_:)))
-            .flatMapLatest { _ -> Observable<Void> in
-                print("a")
-            return .just(Void())
-        }
-        .asDriver(onErrorJustReturn: Void())
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
 
-        let output = self.viewModel.transform(input: NextLaunchViewModel.Input(loadData: viewWillAppear))
-        output.refreshed.drive().disposed(by: self.bag)
-    }
-    
-    override func loadScreenData() {
+        let viewDidAppear = self.rx.methodInvoked(#selector(viewDidAppear(_:)))
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
         
+        let input = NextLaunchViewModel.Input(loadData: viewWillAppear,
+                                              refresh: viewDidAppear)
+
+        let output = self.viewModel.transform(input: input)
+        
+        output.nextLaunch
+            .drive(onNext: { launch in
+                print(launch)
+            })
+            .disposed(by: self.bag)
+        
+        output.refreshed
+            .drive()
+            .disposed(by: self.bag)
     }
 }
