@@ -33,6 +33,13 @@ struct DependencyContainer {
         container.register(NextLaunchController.self) { resolver in
             return NextLaunchController(viewModel: resolver.resolve(NextLaunchViewModel.self)!)
         }
+        //MARK: Info
+        container.register(InfoViewModel.self) { resolver in
+            return InfoViewModel()
+        }
+        container.register(InfoController.self) { resolver in
+            return InfoController(viewModel: resolver.resolve(InfoViewModel.self)!)
+        }
         //MARK: MoyaProvider
         container.register(MoyaProvider<SpaceXService>.self) { _ in
             return MoyaProvider<SpaceXService>(plugins: [NetworkLoggerPlugin(verbose: true)])
