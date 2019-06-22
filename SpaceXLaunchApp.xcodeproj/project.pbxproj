@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10C85AF8B817992B79D42596 /* Pods_SpaceXLaunchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0DE483BA3D554ACFAB6FCB /* Pods_SpaceXLaunchApp.framework */; };
+		4561ADC9FD6BB5D9945765F0 /* Pods_SpaceXLaunchAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23D0C330E84DEEB2FDF499B /* Pods_SpaceXLaunchAppUITests.framework */; };
+		6BA550DC22C93919CF4AFACF /* Pods_SpaceXLaunchAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A8B5061D59E3B61FCE3740 /* Pods_SpaceXLaunchAppTests.framework */; };
 		6F26F0CD22BCE7E9001BA8E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F26F0CC22BCE7E9001BA8E3 /* AppDelegate.swift */; };
 		6F26F0D422BCE7EA001BA8E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F26F0D322BCE7EA001BA8E3 /* Assets.xcassets */; };
 		6F26F0D722BCE7EA001BA8E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F26F0D522BCE7EA001BA8E3 /* LaunchScreen.storyboard */; };
@@ -45,9 +48,7 @@
 		6FE5D9DE22BEB7C8009D1036 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5D9DD22BEB7C8009D1036 /* InfoViewModel.swift */; };
 		6FE5D9E022BEB963009D1036 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5D9DF22BEB963009D1036 /* Globals.swift */; };
 		6FE5D9E522BEBACF009D1036 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5D9E422BEBACF009D1036 /* UIImageExtension.swift */; };
-		79E63EE1CA1BCB2AB6284E3E /* Pods_SpaceXLaunchAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2471EBB8E12B818F1BE880B9 /* Pods_SpaceXLaunchAppTests.framework */; };
-		A3E4E37488CAEEAA3894832E /* Pods_SpaceXLaunchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8A5C69CB363A4629AA6F1F /* Pods_SpaceXLaunchApp.framework */; };
-		A6905EE0382BAE2A1B8FC9B0 /* Pods_SpaceXLaunchAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D69CF3E10DEF58F40AC3C /* Pods_SpaceXLaunchAppUITests.framework */; };
+		6FE5D9ED22BEC026009D1036 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FE5D9EF22BEC026009D1036 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B0CB56CCD70A83A55FE769 /* Pods-SpaceXLaunchAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppTests/Pods-SpaceXLaunchAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		2471EBB8E12B818F1BE880B9 /* Pods_SpaceXLaunchAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLaunchAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		452D69CF3E10DEF58F40AC3C /* Pods_SpaceXLaunchAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLaunchAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14077C653A85B7C6DAD6482B /* Pods-SpaceXLaunchAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppTests/Pods-SpaceXLaunchAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		19A8B5061D59E3B61FCE3740 /* Pods_SpaceXLaunchAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLaunchAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE78E5F1FE58FA5D852BA24 /* Pods-SpaceXLaunchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchApp.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp.release.xcconfig"; sourceTree = "<group>"; };
 		6F26F0C922BCE7E9001BA8E3 /* SpaceXLaunchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXLaunchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F26F0CC22BCE7E9001BA8E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F26F0D322BCE7EA001BA8E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,12 +116,15 @@
 		6FE5D9DD22BEB7C8009D1036 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		6FE5D9DF22BEB963009D1036 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		6FE5D9E422BEBACF009D1036 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		721488BD2330B5F441BA8C51 /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppUITests/Pods-SpaceXLaunchAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7EBEDF50EC2EA20E7108ED9C /* Pods-SpaceXLaunchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchApp.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp.debug.xcconfig"; sourceTree = "<group>"; };
-		A52DD852249CAC9AED75A567 /* Pods-SpaceXLaunchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchApp.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp.release.xcconfig"; sourceTree = "<group>"; };
-		A79BE4FF406D0ABE96D756D4 /* Pods-SpaceXLaunchAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppUITests/Pods-SpaceXLaunchAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B785ECF6070766734EE374F2 /* Pods-SpaceXLaunchAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppTests/Pods-SpaceXLaunchAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC8A5C69CB363A4629AA6F1F /* Pods_SpaceXLaunchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLaunchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FE5D9EE22BEC026009D1036 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6FE5D9F222BEC08F009D1036 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6FE5D9F322BEC08F009D1036 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		74489BF44B866271B5B626BB /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppUITests/Pods-SpaceXLaunchAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DDEDB9358A242BDD6E79246 /* Pods-SpaceXLaunchAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppTests/Pods-SpaceXLaunchAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9E0DE483BA3D554ACFAB6FCB /* Pods_SpaceXLaunchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLaunchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D23D0C330E84DEEB2FDF499B /* Pods_SpaceXLaunchAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpaceXLaunchAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CB9546E1A5ED3EF68B1321 /* Pods-SpaceXLaunchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchApp.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E548BB5CBDA84923A2FBE921 /* Pods-SpaceXLaunchAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchAppUITests/Pods-SpaceXLaunchAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E4E37488CAEEAA3894832E /* Pods_SpaceXLaunchApp.framework in Frameworks */,
+				10C85AF8B817992B79D42596 /* Pods_SpaceXLaunchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E63EE1CA1BCB2AB6284E3E /* Pods_SpaceXLaunchAppTests.framework in Frameworks */,
+				6BA550DC22C93919CF4AFACF /* Pods_SpaceXLaunchAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6905EE0382BAE2A1B8FC9B0 /* Pods_SpaceXLaunchAppUITests.framework in Frameworks */,
+				4561ADC9FD6BB5D9945765F0 /* Pods_SpaceXLaunchAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +163,7 @@
 				6F26F0EB22BCE7EA001BA8E3 /* SpaceXLaunchAppUITests */,
 				6F26F0CA22BCE7E9001BA8E3 /* Products */,
 				F39D4B74F06A2ABB23A959B4 /* Pods */,
-				96D3A4D987C28A8302EAAC6F /* Frameworks */,
+				78B5E545C58B53B8B30F777A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +188,7 @@
 				6F77607F22BCF6D3002B119A /* Base */,
 				6F77608222BCF716002B119A /* Utils */,
 				6FE5D9DF22BEB963009D1036 /* Globals.swift */,
+				6FE5D9EF22BEC026009D1036 /* Localizable.strings */,
 				6F26F0CC22BCE7E9001BA8E3 /* AppDelegate.swift */,
 				6F26F0D322BCE7EA001BA8E3 /* Assets.xcassets */,
 				6F26F0D522BCE7EA001BA8E3 /* LaunchScreen.storyboard */,
@@ -371,12 +376,12 @@
 			path = viewModels;
 			sourceTree = "<group>";
 		};
-		96D3A4D987C28A8302EAAC6F /* Frameworks */ = {
+		78B5E545C58B53B8B30F777A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC8A5C69CB363A4629AA6F1F /* Pods_SpaceXLaunchApp.framework */,
-				2471EBB8E12B818F1BE880B9 /* Pods_SpaceXLaunchAppTests.framework */,
-				452D69CF3E10DEF58F40AC3C /* Pods_SpaceXLaunchAppUITests.framework */,
+				9E0DE483BA3D554ACFAB6FCB /* Pods_SpaceXLaunchApp.framework */,
+				19A8B5061D59E3B61FCE3740 /* Pods_SpaceXLaunchAppTests.framework */,
+				D23D0C330E84DEEB2FDF499B /* Pods_SpaceXLaunchAppUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -384,12 +389,12 @@
 		F39D4B74F06A2ABB23A959B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7EBEDF50EC2EA20E7108ED9C /* Pods-SpaceXLaunchApp.debug.xcconfig */,
-				A52DD852249CAC9AED75A567 /* Pods-SpaceXLaunchApp.release.xcconfig */,
-				B785ECF6070766734EE374F2 /* Pods-SpaceXLaunchAppTests.debug.xcconfig */,
-				05B0CB56CCD70A83A55FE769 /* Pods-SpaceXLaunchAppTests.release.xcconfig */,
-				721488BD2330B5F441BA8C51 /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */,
-				A79BE4FF406D0ABE96D756D4 /* Pods-SpaceXLaunchAppUITests.release.xcconfig */,
+				D2CB9546E1A5ED3EF68B1321 /* Pods-SpaceXLaunchApp.debug.xcconfig */,
+				6AE78E5F1FE58FA5D852BA24 /* Pods-SpaceXLaunchApp.release.xcconfig */,
+				7DDEDB9358A242BDD6E79246 /* Pods-SpaceXLaunchAppTests.debug.xcconfig */,
+				14077C653A85B7C6DAD6482B /* Pods-SpaceXLaunchAppTests.release.xcconfig */,
+				74489BF44B866271B5B626BB /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */,
+				E548BB5CBDA84923A2FBE921 /* Pods-SpaceXLaunchAppUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -401,12 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F26F0F122BCE7EA001BA8E3 /* Build configuration list for PBXNativeTarget "SpaceXLaunchApp" */;
 			buildPhases = (
-				706E2240C0FB1AB451765945 /* [CP] Check Pods Manifest.lock */,
+				ABE23873C2625D529ABC6131 /* [CP] Check Pods Manifest.lock */,
 				6F26F0C522BCE7E8001BA8E3 /* Sources */,
 				6F26F0C622BCE7E8001BA8E3 /* Frameworks */,
 				6F26F0C722BCE7E8001BA8E3 /* Resources */,
-				ECD04712B6ABACBA0D5BA0D9 /* [CP] Embed Pods Frameworks */,
-				6FE5D9E122BEB9DD009D1036 /* ShellScript */,
+				6FE5D9F422BEC26C009D1036 /* ShellScript */,
+				A111C084A10F7BBDCD76CB6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -421,7 +426,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F26F0F422BCE7EA001BA8E3 /* Build configuration list for PBXNativeTarget "SpaceXLaunchAppTests" */;
 			buildPhases = (
-				0FDF075E80E47FA12162F45E /* [CP] Check Pods Manifest.lock */,
+				54772BDE244F1B38FDB266E7 /* [CP] Check Pods Manifest.lock */,
 				6F26F0D922BCE7EA001BA8E3 /* Sources */,
 				6F26F0DA22BCE7EA001BA8E3 /* Frameworks */,
 				6F26F0DB22BCE7EA001BA8E3 /* Resources */,
@@ -440,7 +445,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F26F0F722BCE7EA001BA8E3 /* Build configuration list for PBXNativeTarget "SpaceXLaunchAppUITests" */;
 			buildPhases = (
-				D6AE5C46D4B17ADA6B92AE18 /* [CP] Check Pods Manifest.lock */,
+				BCDEA09D3590DA7B1FCB2A56 /* [CP] Check Pods Manifest.lock */,
 				6F26F0E422BCE7EA001BA8E3 /* Sources */,
 				6F26F0E522BCE7EA001BA8E3 /* Frameworks */,
 				6F26F0E622BCE7EA001BA8E3 /* Resources */,
@@ -485,6 +490,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 6F26F0C022BCE7E8001BA8E3;
 			productRefGroup = 6F26F0CA22BCE7E9001BA8E3 /* Products */;
@@ -504,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F26F0D722BCE7EA001BA8E3 /* LaunchScreen.storyboard in Resources */,
+				6FE5D9ED22BEC026009D1036 /* Localizable.strings in Resources */,
 				6F26F0D422BCE7EA001BA8E3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +532,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0FDF075E80E47FA12162F45E /* [CP] Check Pods Manifest.lock */ = {
+		54772BDE244F1B38FDB266E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,7 +554,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6FE5D9E122BEB9DD009D1036 /* ShellScript */ = {
+		6FE5D9F422BEC26C009D1036 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -562,9 +569,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		706E2240C0FB1AB451765945 /* [CP] Check Pods Manifest.lock */ = {
+		A111C084A10F7BBDCD76CB6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABE23873C2625D529ABC6131 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -586,7 +610,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D6AE5C46D4B17ADA6B92AE18 /* [CP] Check Pods Manifest.lock */ = {
+		BCDEA09D3590DA7B1FCB2A56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -606,23 +630,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ECD04712B6ABACBA0D5BA0D9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXLaunchApp/Pods-SpaceXLaunchApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -705,8 +712,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				6F26F0D622BCE7EA001BA8E3 /* Base */,
+				6FE5D9F322BEC08F009D1036 /* pl */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6FE5D9EF22BEC026009D1036 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FE5D9EE22BEC026009D1036 /* en */,
+				6FE5D9F222BEC08F009D1036 /* pl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -716,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -777,6 +795,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -830,7 +849,7 @@
 		};
 		6F26F0F222BCE7EA001BA8E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EBEDF50EC2EA20E7108ED9C /* Pods-SpaceXLaunchApp.debug.xcconfig */;
+			baseConfigurationReference = D2CB9546E1A5ED3EF68B1321 /* Pods-SpaceXLaunchApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -849,7 +868,7 @@
 		};
 		6F26F0F322BCE7EA001BA8E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A52DD852249CAC9AED75A567 /* Pods-SpaceXLaunchApp.release.xcconfig */;
+			baseConfigurationReference = 6AE78E5F1FE58FA5D852BA24 /* Pods-SpaceXLaunchApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -868,7 +887,7 @@
 		};
 		6F26F0F522BCE7EA001BA8E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B785ECF6070766734EE374F2 /* Pods-SpaceXLaunchAppTests.debug.xcconfig */;
+			baseConfigurationReference = 7DDEDB9358A242BDD6E79246 /* Pods-SpaceXLaunchAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -890,7 +909,7 @@
 		};
 		6F26F0F622BCE7EA001BA8E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05B0CB56CCD70A83A55FE769 /* Pods-SpaceXLaunchAppTests.release.xcconfig */;
+			baseConfigurationReference = 14077C653A85B7C6DAD6482B /* Pods-SpaceXLaunchAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -912,7 +931,7 @@
 		};
 		6F26F0F822BCE7EA001BA8E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 721488BD2330B5F441BA8C51 /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */;
+			baseConfigurationReference = 74489BF44B866271B5B626BB /* Pods-SpaceXLaunchAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -933,7 +952,7 @@
 		};
 		6F26F0F922BCE7EA001BA8E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A79BE4FF406D0ABE96D756D4 /* Pods-SpaceXLaunchAppUITests.release.xcconfig */;
+			baseConfigurationReference = E548BB5CBDA84923A2FBE921 /* Pods-SpaceXLaunchAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

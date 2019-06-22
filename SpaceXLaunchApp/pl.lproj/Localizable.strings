@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SpaceXLaunchApp
+
+  Created by Mariusz Sut on 22/06/2019.
+  Copyright © 2019 Mariusz Sut. All rights reserved.
+*/
+
+/* Menu */
+"Next launch" = "Następny start";
+"History" = "Historia";
+"Info" = "Informacje";

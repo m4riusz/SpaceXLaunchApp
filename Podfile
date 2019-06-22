@@ -12,9 +12,6 @@ target 'SpaceXLaunchApp' do
   pod 'SnapKit'
   pod 'RealmSwift'
   pod 'RxRealm'
-  pod 'SwiftLint'
-  pod 'SwifterSwift/UIKit'
-  pod 'RxSwiftExt'
   pod 'RxDataSources'
   pod 'Swinject'
 
