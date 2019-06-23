@@ -16,6 +16,8 @@ struct Launch: Codable, Equatable {
     let launchDateUnix: Int
     let launchSuccess: Bool
     let details: String
+    let rocket: Rocket
+    let links: Links
     var isNext: Bool = false
     
     enum CodingKeys: String, CodingKey {
@@ -26,6 +28,8 @@ struct Launch: Codable, Equatable {
         case launchDateUnix = "launch_date_unix"
         case launchSuccess = "launch_success"
         case details = "details"
+        case rocket = "rocket"
+        case links = "links"
     }
     
     init(id: String,
@@ -35,6 +39,8 @@ struct Launch: Codable, Equatable {
          launchDateUnix: Int,
          launchSuccess: Bool,
          details: String,
+         rocket: Rocket,
+         links: Links,
          isNext: Bool) {
         self.id = id
         self.flightNumber = flightNumber
@@ -43,6 +49,8 @@ struct Launch: Codable, Equatable {
         self.launchDateUnix = launchDateUnix
         self.launchSuccess = launchSuccess
         self.details = details
+        self.rocket = rocket
+        self.links = links
         self.isNext = isNext
     }
     
@@ -55,5 +63,7 @@ struct Launch: Codable, Equatable {
         self.launchDateUnix = try! values.decodeIfPresent(Int.self, forKey: .launchDateUnix) ?? 0
         self.launchSuccess = try! values.decodeIfPresent(Bool.self, forKey: .launchSuccess) ?? true
         self.details = try! values.decodeIfPresent(String.self, forKey: .details) ?? ""
+        self.rocket = try! values.decode(Rocket.self, forKey: .rocket)
+        self.links = try! values.decode(Links.self, forKey: .links)
     }
 }

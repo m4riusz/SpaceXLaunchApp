@@ -17,6 +17,9 @@ class RMLaunch: Object {
     @objc dynamic var launchDateUnix: Int = 0
     @objc dynamic var launchSuccess: Bool = true
     @objc dynamic var details: String?
+    @objc dynamic var rocket: RMRocket?
+    @objc dynamic var links: RMLinks?
+    
     @objc dynamic var isNext: Bool = false
     
     override class func primaryKey() -> String? {
@@ -33,6 +36,8 @@ extension RMLaunch : DomainConvertibleType {
                       launchDateUnix: self.launchDateUnix,
                       launchSuccess: self.launchSuccess,
                       details: self.details!,
+                      rocket: self.rocket!.asDomain(),
+                      links: self.links!.asDomain(),
                       isNext: self.isNext)
     }
 }
@@ -47,6 +52,8 @@ extension Launch : RealmRepresentable {
             object.launchDateUnix = self.launchDateUnix
             object.launchSuccess = self.launchSuccess
             object.details = self.details
+            object.rocket = self.rocket.asRealm()
+            object.links = self.links.asRealm()
             object.isNext = self.isNext
         })
     }

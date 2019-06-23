@@ -9,7 +9,7 @@
 import Foundation
 
 struct AppDefaults {
-    static let realmSchemaVersion: UInt64 = 1
+    static let realmSchemaVersion: UInt64 = 2
 }
 
 enum Images : String {
