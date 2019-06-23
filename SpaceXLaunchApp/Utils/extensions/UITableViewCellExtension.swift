@@ -1,5 +1,5 @@
 //
-//  UICollectionViewCellExtension.swift
+//  UITableViewCellExtension.swift
 //  SpaceXLaunchApp
 //
 //  Created by Mariusz Sut on 21/06/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UICollectionViewCell {
+extension UITableViewCell {
     class func reusableIdentifier() -> String {
         return String(describing: self)
     }

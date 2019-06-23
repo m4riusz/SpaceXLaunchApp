@@ -18,7 +18,7 @@ struct NextLaunchViewModel: ViewModelType {
     }
     
     struct Output {
-        let nextLaunch: Driver<Launch>
+        let nextLaunch: Driver<[LaunchSectionViewModel]>
         let refreshed: Driver<Void>
         let error: Driver<Error>
     }
@@ -38,7 +38,10 @@ struct NextLaunchViewModel: ViewModelType {
             .flatMapLatest { _ -> Observable<Launch> in
                 return self.launchRepository.getNextLaunch()
             }
-            .asDriverOnErrorJustComplete()
+            .flatMapLatest({ launch -> Observable<[LaunchSectionViewModel]> in
+                return .just([LaunchSectionViewModel(items: [LaunchViewModel(launch: launch)])])
+            })
+            .asDriver(onErrorJustReturn: [])
         
         let refreshedAction = input.refresh
             .asObservable()

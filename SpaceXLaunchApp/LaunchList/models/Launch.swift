@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Launch: Codable {
+struct Launch: Codable, Equatable {
     let id: String
     let flightNumber: Int
     let missionName: String
@@ -50,7 +50,7 @@ struct Launch: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try! values.decodeIfPresent(String.self, forKey: .id) ?? ""
         self.flightNumber = try! values.decodeIfPresent(Int.self, forKey: .flightNumber) ?? 0
-        self.missionName = try! values.decodeIfPresent(String.self, forKey: .id) ?? ""
+        self.missionName = try! values.decodeIfPresent(String.self, forKey: .missionName) ?? ""
         self.upcoming = try! values.decodeIfPresent(Bool.self, forKey: .upcoming) ?? false
         self.launchDateUnix = try! values.decodeIfPresent(Int.self, forKey: .launchDateUnix) ?? 0
         self.launchSuccess = try! values.decodeIfPresent(Bool.self, forKey: .launchSuccess) ?? true

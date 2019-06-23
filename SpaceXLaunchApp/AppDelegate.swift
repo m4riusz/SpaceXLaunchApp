@@ -32,8 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         infoController.tabBarItem = UITabBarItem(title: "Info".localized(),
                                                  image: .withImage(.info),
                                                  selectedImage: nil)
-        
-        tabBarController.viewControllers = [nextLaunchController, launchListController, infoController]
+        tabBarController.viewControllers = [
+            UINavigationController(rootViewController: nextLaunchController),
+            UINavigationController(rootViewController: launchListController),
+            UINavigationController(rootViewController: infoController)
+        ]
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
