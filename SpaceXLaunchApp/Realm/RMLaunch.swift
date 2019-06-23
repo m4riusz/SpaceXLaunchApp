@@ -14,8 +14,8 @@ class RMLaunch: Object {
     @objc dynamic var flightNumber: Int = 0
     @objc dynamic var missionName: String?
     @objc dynamic var upcoming: Bool = false
-    @objc dynamic var launchDateUnix: Int = 0
-    @objc dynamic var launchSuccess: Bool = true
+    @objc dynamic var launchDate: Date?
+    @objc dynamic var launchState: Int = 0
     @objc dynamic var details: String?
     @objc dynamic var rocket: RMRocket?
     @objc dynamic var links: RMLinks?
@@ -33,8 +33,8 @@ extension RMLaunch : DomainConvertibleType {
                       flightNumber: self.flightNumber,
                       missionName: self.missionName!,
                       upcoming: self.upcoming,
-                      launchDateUnix: self.launchDateUnix,
-                      launchSuccess: self.launchSuccess,
+                      launchDate: self.launchDate!,
+                      launchState: LaunchState(rawValue: self.launchState)!,
                       details: self.details!,
                       rocket: self.rocket!.asDomain(),
                       links: self.links!.asDomain(),
@@ -49,8 +49,8 @@ extension Launch : RealmRepresentable {
             object.flightNumber = self.flightNumber
             object.missionName = self.missionName
             object.upcoming = upcoming
-            object.launchDateUnix = self.launchDateUnix
-            object.launchSuccess = self.launchSuccess
+            object.launchDate = self.launchDate
+            object.launchState = self.launchState.rawValue
             object.details = self.details
             object.rocket = self.rocket.asRealm()
             object.links = self.links.asRealm()

@@ -8,13 +8,26 @@
 
 import Foundation
 
+enum LaunchState: Int, Codable {
+    case notStarted
+    case success
+    case failure
+    
+    static func fromBool(_ state: Bool?) -> LaunchState {
+        guard let hasState = state else {
+            return .notStarted
+        }
+        return hasState ? .success : .failure
+    }
+}
+
 struct Launch: Codable, Equatable {
     let id: String
     let flightNumber: Int
     let missionName: String
     let upcoming: Bool
-    let launchDateUnix: Int
-    let launchSuccess: Bool
+    let launchDate: Date
+    let launchState: LaunchState
     let details: String
     let rocket: Rocket
     let links: Links
@@ -25,8 +38,8 @@ struct Launch: Codable, Equatable {
         case flightNumber = "flight_number"
         case missionName = "mission_name"
         case upcoming = "upcoming"
-        case launchDateUnix = "launch_date_unix"
-        case launchSuccess = "launch_success"
+        case launchDate = "launch_date_unix"
+        case launchState = "launch_success"
         case details = "details"
         case rocket = "rocket"
         case links = "links"
@@ -36,8 +49,8 @@ struct Launch: Codable, Equatable {
          flightNumber: Int,
          missionName: String,
          upcoming: Bool,
-         launchDateUnix: Int,
-         launchSuccess: Bool,
+         launchDate: Date,
+         launchState: LaunchState,
          details: String,
          rocket: Rocket,
          links: Links,
@@ -46,8 +59,8 @@ struct Launch: Codable, Equatable {
         self.flightNumber = flightNumber
         self.missionName = missionName
         self.upcoming = upcoming
-        self.launchDateUnix = launchDateUnix
-        self.launchSuccess = launchSuccess
+        self.launchDate = launchDate
+        self.launchState = launchState
         self.details = details
         self.rocket = rocket
         self.links = links
@@ -60,8 +73,9 @@ struct Launch: Codable, Equatable {
         self.flightNumber = try! values.decodeIfPresent(Int.self, forKey: .flightNumber) ?? 0
         self.missionName = try! values.decodeIfPresent(String.self, forKey: .missionName) ?? ""
         self.upcoming = try! values.decodeIfPresent(Bool.self, forKey: .upcoming) ?? false
-        self.launchDateUnix = try! values.decodeIfPresent(Int.self, forKey: .launchDateUnix) ?? 0
-        self.launchSuccess = try! values.decodeIfPresent(Bool.self, forKey: .launchSuccess) ?? true
+        let unixTime: TimeInterval = try! values.decodeIfPresent(Double.self, forKey: .launchDate) ?? 0
+        self.launchDate = Date(timeIntervalSince1970: unixTime)
+        self.launchState = LaunchState.fromBool(try! values.decodeIfPresent(Bool.self, forKey: .launchState))
         self.details = try! values.decodeIfPresent(String.self, forKey: .details) ?? ""
         self.rocket = try! values.decode(Rocket.self, forKey: .rocket)
         self.links = try! values.decode(Links.self, forKey: .links)

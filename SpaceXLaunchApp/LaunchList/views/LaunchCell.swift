@@ -108,7 +108,9 @@ class LaunchCell: BaseTableViewCell {
     
     func updateForItem(_ item: LaunchViewModel) {
         self.nameLabel?.text = item.launch.missionName
-        self.dateLabel?.text = String(item.launch.launchDateUnix)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
+        self.dateLabel?.text = dateFormatter.string(from: item.launch.launchDate)
         self.infoLabel?.text = item.launch.details
     }
 }
