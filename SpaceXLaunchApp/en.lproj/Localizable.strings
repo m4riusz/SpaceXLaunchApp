@@ -10,3 +10,8 @@
 "Next launch" = "Next launch";
 "History" = "History";
 "Info" = "Info";
+
+/* Empty view */
+"EmptyViewLoading" = "Loading...";
+"EmptyViewNextLaunchNotFound" = "Next launch not found!";
+"EmptyViewError" = "Something went wrong! Try again later.";

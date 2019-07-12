@@ -10,3 +10,8 @@
 "Next launch" = "Następny start";
 "History" = "Historia";
 "Info" = "Informacje";
+
+/* Empty view */
+"EmptyViewLoading" = "Wczytuję...";
+"EmptyViewNextLaunchNotFound" = "Nie znaleziono następnego startu!";
+"EmptyViewError" = "Coś poszło nie tak! Spróbuj ponownie pózniej.";

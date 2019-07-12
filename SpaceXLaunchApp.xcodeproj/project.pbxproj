@@ -45,6 +45,8 @@
 		6FDEE9F422BE54D100271F92 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F322BE54D100271F92 /* DomainConvertibleType.swift */; };
 		6FDEE9F622BE54F900271F92 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F522BE54F900271F92 /* RealmRepresentable.swift */; };
 		6FDEE9F922BE569600271F92 /* ObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDEE9F822BE569600271F92 /* ObjectExtension.swift */; };
+		6FE4CAE222D900AD0027B23A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4CAE122D900AD0027B23A /* EmptyView.swift */; };
+		6FE4CAE622D90AD90027B23A /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE4CAE522D90AD90027B23A /* ActivityIndicator.swift */; };
 		6FE5D9D322BE9D55009D1036 /* ObservableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5D9D222BE9D55009D1036 /* ObservableExtension.swift */; };
 		6FE5D9D522BEADA8009D1036 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5D9D422BEADA8009D1036 /* ErrorTracker.swift */; };
 		6FE5D9D722BEB017009D1036 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE5D9D622BEB017009D1036 /* BuildConfig.swift */; };
@@ -117,6 +119,8 @@
 		6FDEE9F322BE54D100271F92 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
 		6FDEE9F522BE54F900271F92 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		6FDEE9F822BE569600271F92 /* ObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtension.swift; sourceTree = "<group>"; };
+		6FE4CAE122D900AD0027B23A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		6FE4CAE522D90AD90027B23A /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		6FE5D9D222BE9D55009D1036 /* ObservableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableExtension.swift; sourceTree = "<group>"; };
 		6FE5D9D422BEADA8009D1036 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		6FE5D9D622BEB017009D1036 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				6F77609022BCF839002B119A /* BaseView.swift */,
 				6F77609222BCF852002B119A /* ViewModelType.swift */,
 				6F77609422BCF87D002B119A /* BaseViewController.swift */,
+				6FE4CAE122D900AD0027B23A /* EmptyView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				6FDEE9E922BE4C7100271F92 /* API.swift */,
 				6FE5D9D422BEADA8009D1036 /* ErrorTracker.swift */,
 				6FE5D9D622BEB017009D1036 /* BuildConfig.swift */,
+				6FE4CAE522D90AD90027B23A /* ActivityIndicator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -660,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FDEE9EA22BE4C7100271F92 /* API.swift in Sources */,
+				6FE4CAE222D900AD0027B23A /* EmptyView.swift in Sources */,
 				6F77608D22BCF7DA002B119A /* UITableViewExtensionRx.swift in Sources */,
 				6FA3AB0822C00253001C7637 /* RMLinks.swift in Sources */,
 				6FCBAB5E22BF88D1006EA870 /* LaunchSectionViewModel.swift in Sources */,
@@ -694,6 +701,7 @@
 				6F77608422BCF732002B119A /* DependencyContainer.swift in Sources */,
 				6F7760B022BD069E002B119A /* LaunchSite.swift in Sources */,
 				6FDEE9F422BE54D100271F92 /* DomainConvertibleType.swift in Sources */,
+				6FE4CAE622D90AD90027B23A /* ActivityIndicator.swift in Sources */,
 				6FCBAB5A22BF7D83006EA870 /* LaunchCell.swift in Sources */,
 				6F77608122BCF6EB002B119A /* BaseTableViewCell.swift in Sources */,
 				6FCBAB5C22BF8877006EA870 /* LaunchViewModel.swift in Sources */,
